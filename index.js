@@ -3,17 +3,13 @@ const mongoose = require("mongoose");
 const express = require("express");
 const app = express();
 
-const questionRouter = require("./routes/QuestionRoutes");
+const questionRouter = require("./routes/question.routes");
  
-//middlewares
 app.use(express.json());
-app.get("/", (req, res)=>{
-  res.send("hello")
-})
 app.use("/api/questions", questionRouter);
  
 app.listen(process.env.PORT, () => {
-  console.log(`Server is running on port ${process.env.PORT}`);
+  console.log(`http://localhost:${process.env.PORT}`);
 });
  
 mongoose.set('strictQuery', true);

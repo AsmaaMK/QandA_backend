@@ -1,4 +1,4 @@
-const QuestionModel = require("../models/Question");
+const QuestionModel = require("../models/question.model");
  
 exports.getAllQuestions = async () => {
   return await QuestionModel.find();

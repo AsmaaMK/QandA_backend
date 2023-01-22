@@ -1,4 +1,4 @@
-const questionService = require("../services/QuestionService");
+const questionService = require("../services/question.service");
  
 exports.getAllQuestions = async (req, res) => {
   try {
